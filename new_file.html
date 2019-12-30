@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8" />
+
+		<title></title>
+
+		<script type="text/javascript" src="jquery-1.12.4.js" ></script>
+		<div id="img"></div>
+
+		<span id="img2"></span>
+
+		<span id="img3"></span>
+
+		<span id="img4"></span>
+
+		<span id="img5"></span>
+
+		<span id="img10"></span>
+
+		<style type="text/css">
+			#img10 {
+				width: 56px;
+				height: 56px;
+				background-image: url(images/btn_fruit.png);
+				top: 226px;
+				left: 50px;
+				position: absolute;
+				cursor: hand;
+			}
+			
+			bg {
+				position: absolute;
+				width: 56px;
+				height: 56px;
+				background-image:url(images/plowland.jpg)
+			}
+			
+			#img9 {
+				width: 500px;
+				height: 280px;
+				background-image: url(images/btn_fruit.png);
+				background-repeat: no-repeat;
+				position: absolute;
+			}
+			
+			#img3 {
+				width: 56px;
+				height: 56px;
+				background-image: url(images/btn_fruit.png);
+				top: 226px;
+				left: 290px;
+				position: absolute;
+				cursor: hand;
+			}
+			
+			#img5 {
+				width: 56px;
+				height: 56px;
+				background-image: url(images/btn_fruit.png);
+				top: 226px;
+				left: 370px;
+				position: absolute;
+				cursor: hand;
+			}
+			
+			#img4 {
+				width: 56px;
+				height: 56px;
+				background-image: url(images/btn_fruit.png);
+				top: 226px;
+				left: 130px;
+				position: absolute;
+				cursor: hand;
+			}
+			
+			#img2 {
+				width: 56px;
+				height: 56px;
+				background-image: url(images/btn_fruit.png);
+				top: 226px;
+				left: 210px;
+				position: absolute;
+				cursor: hand;
+			}
+			
+			.border {
+				border: 2px solid red;
+				border-radius: 50px;
+			}
+		</style>
+
+		<script type="text/javascript">
+			var bg = "img10.png"
+
+			$(function() {
+
+				$("#img10").on("click", function() {
+
+					$(this).addClass("border");
+
+					$("#img9").on("click", function(e) {
+
+						$("<img src='bg/" + bg + "' />").addClass("bg1").prependTo("#img9").css("top", e.pageY - 40).css("left", e.pageX - 30);
+
+					});
+
+				});
+
+				$("#img4").on("click", function() {
+
+					$(this).addClass("border");
+
+					bg = "img8.png";
+
+				});
+
+				$("#img10").on("click", function() {
+
+					$(this).addClass("border");
+
+					bg = "img10.png";
+
+				});
+
+				$("#img2").on("click", function() {
+
+					$(this).addClass("border");
+
+					bg = "img1.png";
+
+				});
+
+				$("#bg3").on("click", function() {
+
+					$(this).addClass("border");
+
+					bg = "img7.png";
+
+				});
+
+				$("#img5").on("click", function() {
+
+					$(this).addClass("border");
+
+					bg = "img7.png";
+
+				});
+
+			});
+		</script>
+
+	</head>
+
+</html>
